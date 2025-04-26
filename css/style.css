@@ -425,10 +425,11 @@ FOOTER
 .footer-content {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
 }
-.footer-logo-box {
+/* .footer-logo-box {
   margin-right: 120px;
-}
+} */
 .footer-logo {
   display: inline-block;
   font-family: "Raleway", sans-serif;
@@ -457,6 +458,7 @@ FOOTER
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  /* margin-right: 80px; */
 }
 
 .footer-socials-title {
@@ -493,4 +495,284 @@ FOOTER
   fill: #f4f4fd;
   width: 24px;
   height: 24px;
+}
+.footer-subscribe-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-subscribe-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  margin-bottom: 16px;
+}
+
+.footer-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+}
+
+.footer-form-input {
+  width: 264px;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background-color: transparent;
+  padding-left: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+.footer-form-input:focus {
+  outline: none;
+  border: 1px solid #4d5ae5;
+}
+
+.footer-form-input::placeholder {
+  color: #ffffff;
+}
+.footer-form-input:focus::placeholder {
+  color: #4d5ae5;
+}
+
+.footer-form-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 24px;
+  background-color: #4d5ae5;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form-btn:hover,
+.footer-form-btn:focus {
+  background-color: #404bbf;
+}
+
+.footer-form-icon {
+  fill: #ffffff;
+}
+
+/*
+///////////////
+MODAL WINDOW
+/////////////// 
+*/
+/* ===== Модалка ===== */
+.modal-overlay {
+  background-color: rgba(46, 47, 66, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* opacity: 0;
+  pointer-events: none; */
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  position: relative;
+  background-color: #ffffff;
+  padding: 72px 24px 24px;
+  width: 408px;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.14), 0 1px 3px rgba(0, 0, 0, 0.12),
+    0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  background-color: #e7e9fc; /* фон кнопки */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* легкий бордер */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: #404bbf;
+  fill: #ffffff;
+}
+.modal-close-icon {
+  stroke: #2e2f42;
+  width: 8px;
+  height: 8px;
+}
+
+.modal-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  margin-bottom: 16px;
+}
+
+/* ===== Форма ===== */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ===== Поля форми ===== */
+.modal-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modal-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+
+.modal-input-wrapper {
+  position: relative;
+}
+
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  padding: 8px 16px 8px 38px;
+  border: 1px solid rgba(46, 47, 66, 0.4); /* Normal */
+  border-radius: 4px;
+  background-color: transparent;
+  font-size: 14px;
+  color: #2e2f42;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-input:focus {
+  border: 1px solid #4d5ae5; /* Active */
+  outline: none;
+}
+
+.modal-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  fill: #2e2f42;
+  pointer-events: none;
+}
+
+/* Текстова область */
+.modal-form-textarea {
+  width: 100%;
+  height: 120px;
+  padding: 8px 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  font-size: 14px;
+  color: #2e2f42;
+  resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-textarea::placeholder {
+  font-size: 14px;
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.modal-form-textarea:focus {
+  border-color: #4d5ae5;
+  outline: none;
+}
+
+/* ===== Чекбокс ===== */
+.modal-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.modal-checkbox-input {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-checkbox-input:checked {
+  background-color: #4d5ae5;
+  border-color: #4d5ae5;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.00039 11.2002L2.80039 8.0002L1.86606 8.93353L6.00039 13.0669L15.0004 4.06686L14.0671 3.13353L6.00039 11.2002Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal-checkbox-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+
+.modal-privacy-link {
+  color: #4d5ae5;
+  text-decoration: underline;
+}
+
+/* ===== Кнопка відправки ===== */
+.modal-submit-btn {
+  margin-top: 24px;
+  padding: 8px 0;
+  width: 100%;
+  background-color: #4d5ae5;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-submit-btn:hover,
+.modal-submit-btn:focus {
+  background-color: #404bbf;
 }

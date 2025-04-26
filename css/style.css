@@ -635,6 +635,7 @@ MODAL WINDOW
 .modal-close-btn:focus {
   background-color: #404bbf;
   border: none;
+  fill: #ffffff;
 }
 
 .modal-close-icon {
@@ -664,7 +665,7 @@ MODAL WINDOW
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .modal-label {
@@ -695,6 +696,7 @@ MODAL WINDOW
 .modal-form-input:focus {
   border-color: #4d5ae5;
   outline: none;
+  fill: #4d5ae5;
 }
 
 .modal-form-icon {
@@ -704,6 +706,7 @@ MODAL WINDOW
   transform: translateY(-50%);
   fill: #2e2f42;
   pointer-events: none;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-textarea {
@@ -713,8 +716,11 @@ MODAL WINDOW
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   background-color: transparent;
-  font-size: 14px;
-  color: #2e2f42;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  outline: transparent;
   resize: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -730,7 +736,7 @@ MODAL WINDOW
 }
 
 .modal-checkbox-wrapper {
-  margin-top: 16px;
+  margin-bottom: 24px;
 }
 
 .modal-checkbox-input {
@@ -788,6 +794,10 @@ MODAL WINDOW
 .modal-privacy-link {
   color: #4d5ae5;
   text-decoration: underline;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: transparent;
 }
 
 .modal-submit-btn {

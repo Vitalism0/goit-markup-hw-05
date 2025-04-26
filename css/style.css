@@ -575,7 +575,7 @@ FOOTER
 MODAL WINDOW
 /////////////// 
 */
-/* --- Оверлей --- */
+
 .modal-overlay {
   background-color: rgba(46, 47, 66, 0.4);
   position: fixed;
@@ -598,22 +598,21 @@ MODAL WINDOW
   pointer-events: auto;
 }
 
-/* --- Модальне вікно --- */
 .modal {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #ffffff;
+  background-color: #fcfcfc;
   padding: 72px 24px 24px;
   width: 408px;
   min-height: 584px;
   border-radius: 4px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.14), 0 1px 3px rgba(0, 0, 0, 0.12),
     0 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* --- Кнопка закриття --- */
 .modal-close-btn {
   position: absolute;
   top: 24px;
@@ -635,15 +634,16 @@ MODAL WINDOW
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   background-color: #404bbf;
+  border: none;
 }
 
 .modal-close-icon {
   stroke: #2e2f42;
   width: 8px;
   height: 8px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* --- Заголовок --- */
 .modal-title {
   font-weight: 500;
   font-size: 16px;
@@ -654,18 +654,17 @@ MODAL WINDOW
   margin-bottom: 16px;
 }
 
-/* --- Форма --- */
 .modal-form {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-/* --- Поля форми --- */
 .modal-form-field {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  margin-bottom: 8px;
 }
 
 .modal-label {
@@ -673,6 +672,7 @@ MODAL WINDOW
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  margin-bottom: 4px;
 }
 
 .modal-input-wrapper {
@@ -688,6 +688,7 @@ MODAL WINDOW
   background-color: transparent;
   font-size: 14px;
   color: #2e2f42;
+  outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -705,7 +706,6 @@ MODAL WINDOW
   pointer-events: none;
 }
 
-/* --- Textarea --- */
 .modal-form-textarea {
   width: 100%;
   height: 120px;
@@ -729,7 +729,6 @@ MODAL WINDOW
   outline: none;
 }
 
-/* --- Чекбокс --- */
 .modal-checkbox-wrapper {
   margin-top: 16px;
 }
@@ -786,13 +785,11 @@ MODAL WINDOW
   fill: #ffffff;
 }
 
-/* --- Лінк на політику --- */
 .modal-privacy-link {
   color: #4d5ae5;
   text-decoration: underline;
 }
 
-/* --- Кнопка відправки --- */
 .modal-submit-btn {
   margin-top: 24px;
   padding: 8px 0;

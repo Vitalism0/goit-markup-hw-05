@@ -572,7 +572,7 @@ FOOTER
 MODAL WINDOW
 /////////////// 
 */
-/* ===== Модалка ===== */
+
 .modal-overlay {
   background-color: rgba(46, 47, 66, 0.4);
   position: fixed;
@@ -584,8 +584,8 @@ MODAL WINDOW
   display: flex;
   justify-content: center;
   align-items: center;
-  /* opacity: 0;
-  pointer-events: none; */
+  opacity: 0;
+  pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -610,8 +610,8 @@ MODAL WINDOW
   right: 24px;
   width: 24px;
   height: 24px;
-  background-color: #e7e9fc; /* фон кнопки */
-  border: 1px solid rgba(0, 0, 0, 0.1); /* легкий бордер */
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -642,14 +642,12 @@ MODAL WINDOW
   margin-bottom: 16px;
 }
 
-/* ===== Форма ===== */
 .modal-form {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-/* ===== Поля форми ===== */
 .modal-form-field {
   display: flex;
   flex-direction: column;
@@ -671,7 +669,7 @@ MODAL WINDOW
   width: 100%;
   height: 40px;
   padding: 8px 16px 8px 38px;
-  border: 1px solid rgba(46, 47, 66, 0.4); /* Normal */
+  border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   background-color: transparent;
   font-size: 14px;
@@ -680,7 +678,7 @@ MODAL WINDOW
 }
 
 .modal-form-input:focus {
-  border: 1px solid #4d5ae5; /* Active */
+  border: 1px solid #4d5ae5;
   outline: none;
 }
 
@@ -693,7 +691,6 @@ MODAL WINDOW
   pointer-events: none;
 }
 
-/* Текстова область */
 .modal-form-textarea {
   width: 100%;
   height: 120px;
@@ -717,7 +714,6 @@ MODAL WINDOW
   outline: none;
 }
 
-/* ===== Чекбокс ===== */
 .modal-checkbox-wrapper {
   display: flex;
   align-items: center;
@@ -755,7 +751,6 @@ MODAL WINDOW
   text-decoration: underline;
 }
 
-/* ===== Кнопка відправки ===== */
 .modal-submit-btn {
   margin-top: 24px;
   padding: 8px 0;

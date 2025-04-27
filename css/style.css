@@ -583,7 +583,6 @@ MODAL WINDOW
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 999;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -591,6 +590,7 @@ MODAL WINDOW
   pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 999;
 }
 
 .modal-overlay.is-open {
@@ -604,9 +604,9 @@ MODAL WINDOW
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fcfcfc;
-  padding: 72px 24px 24px;
   width: 408px;
   min-height: 584px;
+  padding: 72px 24px 24px;
   border-radius: 4px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.14), 0 1px 3px rgba(0, 0, 0, 0.12),
     0 2px 1px rgba(0, 0, 0, 0.2);
@@ -719,14 +719,13 @@ MODAL WINDOW
   background-color: transparent;
   font-size: 14px;
   color: #2e2f42;
-  resize: none;
   outline: transparent;
+  resize: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-textarea:focus {
   border-color: #4d5ae5;
-  outline: none;
 }
 
 .modal-form-textarea::placeholder {
@@ -758,18 +757,17 @@ MODAL WINDOW
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  cursor: pointer;
 }
 
 .modal-checkbox-custom {
   display: inline-flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 16px;
   height: 16px;
-  background-color: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
+  background-color: transparent;
   margin-right: 8px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -796,13 +794,16 @@ MODAL WINDOW
 
 .modal-submit-btn {
   margin-top: 24px;
-  padding: 8px 0;
   width: 100%;
+  min-width: 169px;
+  height: 56px;
   background-color: #4d5ae5;
   color: #ffffff;
-  font-weight: 500;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.5;
+  letter-spacing: 0.04em;
   border: none;
   border-radius: 4px;
   cursor: pointer;

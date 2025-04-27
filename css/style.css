@@ -635,6 +635,7 @@ MODAL WINDOW
 .modal-close-btn:focus {
   background-color: #404bbf;
   border: none;
+  fill: #ffffff;
 }
 
 .modal-close-icon {
@@ -642,10 +643,6 @@ MODAL WINDOW
   width: 8px;
   height: 8px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-close-icon:hover,
-.modal-close-icon:focus {
-  fill: #ffffff;
 }
 
 .modal-title {
@@ -668,7 +665,7 @@ MODAL WINDOW
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .modal-label {
@@ -676,6 +673,7 @@ MODAL WINDOW
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  margin-bottom: 4px;
 }
 
 .modal-input-wrapper {
@@ -721,8 +719,10 @@ MODAL WINDOW
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   background-color: transparent;
-  font-size: 14px;
-  color: #2e2f42;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
   outline: transparent;
   resize: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -773,8 +773,10 @@ MODAL WINDOW
   border-radius: 2px;
   background-color: transparent;
   margin-right: 8px;
+  fill: transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-checkbox-icon {
@@ -783,8 +785,10 @@ MODAL WINDOW
 }
 
 .modal-checkbox-input:checked + .modal-checkbox-custom {
-  background-color: #4d5ae5;
-  border-color: #4d5ae5;
+  background-color: #404bbf;
+  border-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
 }
 
 .modal-checkbox-input:checked + .modal-checkbox-custom .modal-checkbox-icon {

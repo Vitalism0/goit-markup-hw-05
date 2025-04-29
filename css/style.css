@@ -790,7 +790,7 @@ MODAL WINDOW
   border: none;
 }
 
-.modal-checkbox-input:checked + .modal-checkbox-custom .modal-checkbox-icon {
+.modal-checkbox-input:checked + .modal-checkbox-custom svg {
   fill: #f4f4fd;
 }
 

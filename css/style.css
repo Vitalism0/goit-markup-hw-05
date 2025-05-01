@@ -656,7 +656,6 @@ MODAL WINDOW
 }
 
 .modal-form {
-  display: flex;
   flex-direction: column;
   gap: 8px;
 }
@@ -665,7 +664,6 @@ MODAL WINDOW
   margin-bottom: 8px;
 }
 .modal-form-field {
-  display: flex;
   flex-direction: column;
   gap: 4px;
   margin-bottom: 16px;
@@ -743,7 +741,6 @@ MODAL WINDOW
 .modal-checkbox-wrapper {
   display: flex;
   align-items: center;
-  margin-top: 16px;
   margin-bottom: 24px;
 }
 
@@ -758,6 +755,7 @@ MODAL WINDOW
 }
 
 .modal-checkbox-label {
+  display: block;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
@@ -781,7 +779,6 @@ MODAL WINDOW
 }
 
 .modal-checkbox-icon {
-  fill: transparent;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-checkbox-input:checked + .modal-checkbox-label .modal-checkbox-custom {
@@ -797,7 +794,6 @@ MODAL WINDOW
 
 .modal-submit-btn {
   margin-top: 24px;
-  width: 100%;
   min-width: 169px;
   height: 56px;
   background-color: #4d5ae5;
